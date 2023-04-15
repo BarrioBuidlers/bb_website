@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative left-0 w-screen">
+      <main className="absolute left-0 w-full bg-black">
         <FirstSection />
         <SecondSection />
         <div className="h-screen flex items-center justify-center text-8xl bg-[#343a40]">

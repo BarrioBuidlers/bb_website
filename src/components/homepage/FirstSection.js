@@ -8,7 +8,9 @@ export default function FirstSection() {
   const [adaptHeight, setAdaptHeight] = useState(true);
   const handleWheel = useCallback(
     (e) => {
-      const fromTop = window.scrollY;
+      const fromTop = document
+        .querySelector(".firstSection")
+        .getBoundingClientRect().top;
       const delta = e.deltaY;
       if (blockedWheel.current) {
         e.preventDefault();
