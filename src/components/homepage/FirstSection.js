@@ -5,7 +5,7 @@ export default function FirstSection() {
   const lastTimer = useRef(null);
   let blockedWheel = useRef(true);
   const [fullVideo, setFullVideo] = useState(true);
-  const [adaptHeight, setAdaptHeight] = useState(true);
+  const [adaptHeight, setAdaptHeight] = useState(false);
   const handleWheel = useCallback(
     (e) => {
       const fromTop = document
@@ -45,7 +45,7 @@ export default function FirstSection() {
       window.innerHeight >
       document.querySelector(".firstSectionVideo").clientHeight
     ) {
-      setAdaptHeight(false);
+      setAdaptHeight(true);
     }
   }
   useEffect(() => {
