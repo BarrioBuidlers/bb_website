@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SlidingText from "./SlidingText";
+import VerticalText from "./VerticalText";
 
 export default function SecondSection() {
   const instantCompleted = useRef([0, 0, 0, 0]);
@@ -11,8 +12,19 @@ export default function SecondSection() {
     setCompleted(arr);
   }
   return (
-    <div className="grid gap-5 text-4xl min-h-screen my-[10vh] overflow-hidden">
-      <div className="flex flex-col gap-10 items-center justify-center h-full my-8 mx-[10vw] text-center">
+    <div className="verticalTextHolder relative grid gap-5 text-4xl min-h-screen my-[10vh] overflow-hidden">
+      <div className="flex flex-col gap-10 items-center justify-center h-full my-8 mx-[16%] text-center">
+        <VerticalText
+          id={0}
+          text="THIS IS SOME TEXT THIS IS SOME TEXT"
+          position="left"
+          direction="follow"
+        />
+        <VerticalText
+          id={1}
+          text="THIS IS SOME TEXT THIS IS SOME TEXT"
+          position="right"
+        />
         <SlidingText
           from="left"
           pos={0}

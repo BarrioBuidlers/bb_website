@@ -30,10 +30,8 @@ export default function SlidingText(props) {
     }
   }, [delay, props, visible]);
   useEffect(() => {
-    window.addEventListener("wheel", handleScroll);
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
+    document.body.addEventListener("wheel", handleScroll);
+    return () => document.body.removeEventListener("wheel", handleScroll);
   }, [handleScroll]);
   useEffect(() => {
     if (visible) {
@@ -49,15 +47,15 @@ export default function SlidingText(props) {
   }, [props.completed, props.pos, visible]);
   return (
     <div
-      className={`relative ${
+      className={`relative py-1 ${
         !visible
           ? props.from === "left"
             ? "-translate-x-full opacity-0"
             : "translate-x-full opacity-0"
           : "translate-x-0 opacity-1"
-      } transform-gpu transition ${"duration-" + ANIM_DURATION} ${
-        "delay-" + delay
-      } ease-in-out`}
+      } transform-gpu transition ${
+        visible ? "duration-" + ANIM_DURATION : "duration-0"
+      } ${"delay-" + delay} ease-in-out`}
       id={`${hash.current}`}
     >
       <h1>{props.children}</h1>
