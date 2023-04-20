@@ -91,25 +91,7 @@ export default function FirstSection() {
         } transition-transform duration-${DELAY} ease-in-ou text-center`}
       >
         <h1>BARRIO BUIDLERS</h1>
-        <div className="text-4xl gap-2 flex flex-wrap items-center justify-center">
-          <LinkToDev href="" title="OPEN SEA">
-            <OpenSeaLogo color="white" />
-          </LinkToDev>
-          <LinkToDev href="" title="DISCORD">
-            <DiscordLogo color="white" />
-          </LinkToDev>
-          <LinkToDev href="" title="TWITTER">
-            <TwitterLogo color="white" />
-          </LinkToDev>
-          <LinkToDev href="" title="LINKEDIN">
-            <LinkedInLogo color="white" />
-          </LinkToDev>
-          <LinkToDev
-            href="https://www.instagram.com/barrio.buidlers/"
-            title="INSTAGRAM"
-          >
-            <InstagramLogo color="white" />
-          </LinkToDev>
+        <div className="text-4xl gap-2 flex flex-wrap items-center justify-center"> 
         </div>
       </div>
     </div>

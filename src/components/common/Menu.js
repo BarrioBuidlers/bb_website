@@ -1,3 +1,9 @@
+import DiscordLogo from "../../../public/logos/DiscordLogo";
+import InstagramLogo from "../../../public/logos/InstagramLogo";
+import LinkedInLogo from "../../../public/logos/LinkedInLogo";
+import OpenSeaLogo from "../../../public/logos/OpenSeaLogo";
+import TwitterLogo from "../../../public/logos/TwitterLogo";
+import LinkToSocial from "./LinkToSocial";
 import StyledLink from "./StyledLink";
 
 export default function Menu(props) {
@@ -10,6 +16,37 @@ export default function Menu(props) {
       <StyledLink href={"/"}>Home</StyledLink>
       <StyledLink href={"/projects"}>Projects!</StyledLink>
       <StyledLink href={"/teamSection"}>Our Team!</StyledLink>
+      <div className="absolute bottom-0 flex flex-wrap justify-center m-2">
+        <LinkToSocial
+          small
+          href="https://opensea.io/BarrioBuidlers"
+          title="OPEN SEA"
+        >
+          <OpenSeaLogo color="white" />
+        </LinkToSocial>
+        <LinkToSocial
+          small
+          href="https://discord.com/invite/TKzcuVDGMm"
+          title="DISCORD"
+        >
+          <DiscordLogo color="white" />
+        </LinkToSocial>
+        <LinkToSocial
+          small
+          href="https://twitter.com/BBuidlers"
+          title="TWITTER"
+        >
+          <TwitterLogo color="white" />
+        </LinkToSocial>
+        <LinkToSocial
+          small
+          href="https://www.instagram.com/barrio.buidlers/"
+          title="INSTAGRAM"
+          hover="black"
+        >
+          <InstagramLogo color="white" hover="red" />
+        </LinkToSocial>
+      </div>
     </div>
   );
 }
