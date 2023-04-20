@@ -50,15 +50,23 @@ export default function SlidingText(props) {
       className={`relative py-1 ${
         !visible
           ? props.from === "left"
-            ? "-translate-x-full opacity-0"
-            : "translate-x-full opacity-0"
-          : "translate-x-0 opacity-1"
+            ? "-translate-x-full"
+            : "translate-x-full"
+          : "translate-x-0"
       } transform-gpu transition ${
         visible ? "duration-" + ANIM_DURATION : "duration-0"
       } ${"delay-" + delay} ease-in-out`}
       id={`${hash.current}`}
     >
-      <h1>{props.children}</h1>
+      <h1
+        className={`relative py-1 ${
+          !visible ? "opacity-0" : "opacity-1"
+        } transform-gpu transition ${
+          visible ? "duration-" + ANIM_DURATION : "duration-0"
+        } ${"delay-" + delay} ease-in`}
+      >
+        {props.children}
+      </h1>
     </div>
   );
 }

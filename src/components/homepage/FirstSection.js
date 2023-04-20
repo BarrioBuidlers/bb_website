@@ -79,7 +79,10 @@ export default function FirstSection() {
             adaptHeight ? "h-full" : "w-full"
           } max-w-none`}
         >
-          <source src="/videos/bb_drone01.mp4" type="video/mp4" />
+          <source
+            src="https://github.com/BarrioBuidlers/bb_website/raw/main/public/videos/bb_drone01.mp4"
+            type="video/mp4"
+          />
         </video>
       </div>
       <div
